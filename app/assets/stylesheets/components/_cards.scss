@@ -1,0 +1,29 @@
+.fixed-card{
+  background-color: #fafafa;
+  padding: 10px;
+  margin: 10px;
+  height: 170px;
+  text-align: center;
+}
+
+.card{
+  background-color: #fafafa;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.card-actions{
+  padding: 5px;
+  margin: 5px;
+}
+
+.content{
+  display: flex;
+  border: dashed green 2px;
+  justify-content: space-around;
+}
+
+.ingredients{
+  border: dashed red 2px;
+}
