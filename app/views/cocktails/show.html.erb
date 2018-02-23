@@ -1,0 +1,34 @@
+  <div class="wrapper">
+    <div class="large-card">
+      <div class="header">
+        <h1><%= @cocktail.name %></h1>
+        <div class="ingredients">
+          <h2>Ingredients</h2>
+          <ul>
+            <% @cocktail.doses.each do |dose| %>
+            <div class="ingredients_container">
+              <li>
+                <%= dose.amount  %>
+                <%= dose.ingredient.name  %>
+                <%= dose.description  %>
+                <br>
+                <%= link_to "Delete Ingredient", delete_dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } %>
+              </li>
+            </div>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="buttons">
+      <%= link_to "Add Ingredients", new_cocktail_dose_path(@cocktail) %>
+      <%= link_to "Edit cocktail", edit_cocktail_path(@cocktail) %>
+      <%= link_to 'Delete',
+      cocktail_path(@cocktail),
+      method: :delete,
+      data: { confirm: 'Are you sure?' } %>
+      <%= link_to "Go back", cocktails_path  %>
+    </div>
+  </div>
+</div>

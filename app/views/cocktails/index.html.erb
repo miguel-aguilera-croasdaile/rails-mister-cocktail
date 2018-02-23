@@ -1,0 +1,32 @@
+<div class="navbar">
+  <div class="menu">
+   <%= link_to "Add A cocktail", new_cocktail_path %>
+ </div>
+</div>
+
+<div class="title">
+  <h1>All our cocktails</h1>
+  <p>We found 3 cocktails out of our 3 on our website.</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="cocktail-card">
+        <div class="cocktail-card-content">
+          <div class="cocktail-card-title">
+            <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
+          </div>
+          <div> <p> <%= cocktail.doses.count%> <%= cocktail.doses.count == 1 ? "Ingredient" : "Ingredients" %></p></div>
+        </div>
+        <div class="cocktail-card-actions">
+          <%= link_to "More Info" , cocktail_path(cocktail) %>
+          <%= link_to "Edit", edit_cocktail_path(cocktail, :class => "ml-3 text-warning")  %>
+          <%= link_to 'Delete', cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' }, :class => "ml-3 text-danger" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

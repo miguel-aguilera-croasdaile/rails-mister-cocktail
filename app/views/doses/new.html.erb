@@ -1,0 +1,20 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-6 m-auto">
+      <div class="cocktail-form">
+        <h1>Add a new ingredient</h1>
+        <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.input :description %>
+        <%= f.input :amount %>
+        <%= f.association :ingredient%>
+
+        <%= f.button :submit %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
