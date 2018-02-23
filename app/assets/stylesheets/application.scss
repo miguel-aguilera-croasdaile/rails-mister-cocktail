@@ -20,6 +20,10 @@ a{
   transition: color 0.2s ease;
 }
 
+body{
+  background-color: #03172b
+}
+
 a:hover{
   color: black;
   text-decoration: none;
@@ -30,3 +34,10 @@ ul{
   list-style: none;
   padding: 5px;
 }
+
+.container{
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+

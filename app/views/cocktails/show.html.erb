@@ -1,4 +1,4 @@
-<div class="card">
+<div class="large-card">
   <h1><%= @cocktail.name %></h1>
   <h3>Ingredients</h3>
 
@@ -16,13 +16,10 @@
         <% end %>
       </ul>
     </div>
-    <div class="image">
-    </div>
   </div>
 
   <div class="buttons">
     <%= link_to "Add Ingredients", new_cocktail_dose_path(@cocktail), class: "btn" %>
-    <%= link_to "Edit cocktail", edit_cocktail_path(@cocktail), class: "btn" %>
     <%= link_to 'Delete', cocktail_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %>
     <%= link_to "Go back", cocktails_path, class: "btn" %>
   </div>
