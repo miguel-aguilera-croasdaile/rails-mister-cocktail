@@ -42,6 +42,8 @@ gem 'jquery-rails' # Add this line if you use Rails 5.1
 gem 'faker'
 gem 'figaro'
 gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
+
 
 
 group :development, :test do

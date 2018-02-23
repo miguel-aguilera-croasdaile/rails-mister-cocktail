@@ -1,10 +1,12 @@
 <div class="large-card">
   <h1><%= @cocktail.name %></h1>
-  <h3>Ingredients</h3>
 
   <div class="content">
+    <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill, class: "drink_image" %>
+
     <div class="ingredients">
       <ul>
+        <h4>Ingredients</h4>
         <% @cocktail.doses.each do |dose| %>
         <li>
           <%= dose.amount  %>

@@ -31,6 +31,11 @@
   }
 }
 
+.ingredients{
+  width: 50%;
+  height: 250px;
+}
+
 .card-actions{
   padding: 5px;
   margin: 5px;
@@ -42,12 +47,27 @@
   padding: 5px;
 }
 
+.drink_image{
+  height: 100%;
+  width:90%;
+  margin: auto;
+}
+
 .img_container{
   margin: auto;
   margin-bottom: 10px;
-  height: 180px;
-  width: 95%;
+  height: 200px;
+  width: 50%;
   background-image: url("https://www.seriouseats.com/recipes/images/2015/05/20150419-summerdaze-cocktail-Elana-Lepkowski-1500x1125.jpg");
-  background-size: cover;
+}
 
+li ul{
+  padding-top: 0px;
+  h4{
+    margin-top: 0px;
+  }
+}
+
+.cocktail-text{
+  padding: 5px;
 }
